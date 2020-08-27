@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="/lib/Resources/thunder.svg">
+	<link rel="stylesheet" href="/lib/bootstrap-4.5.0-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<link rel="stylesheet" type="text/css" href="./css/forcasthourlyscroll.css">
+	<script type="text/javascript" src="./js/main.js"></script>
+	<script type="text/javascript" src="./js/moon.js"></script>
+
+	<title>imdex</title>
+
+</head>
+
+<body onload="getLocation();">
+	<div class="bg-img" id="blur-bg">
+
+		<p id="last_update" style="position: absolute; top: 2px; left: 85px"></p>
+		<div><img id="sunrImg" src="/lib/Resources/day.svg"
+				style=" width: 64px; position: absolute;  top: 5px; left: 35px"></div>
+		<p id="Sunrise" style="position: absolute; top: 25px; left: 85px;"></p>
+		<!-- <div><img id="sunsImg" src="/lib/Resources/moon.svg" style="margin: 0 0 0 5px; width: 15px"></div> -->
+		<p id="Sunset" style="position: absolute; top: 25px; left: 191px;"></p>
+		<div id="moon1" style="position: absolute; top: 8px; left: 140px;"></div>
+
+		<div><img id="flag" style="position: absolute; top: 50px; left: 10px;"></img></div>
+		<button type="button" class="btn btn"
+			style="margin: 0; padding: 0; position: absolute; top: 35px; left: 50px; width: 250px; text-align: center;">
+			<h5 id="City" style="margin: 13px 0 0 0px; width: 250px; text-align: center"></h5>
+		</button>
+
+		<h2 id="Temperature" style="position: absolute; top: 65px; left: -20px;"></h2>
+		<div><img id="Image" style="position: absolute; top: 45px; left: 140px; width:150px"></img></div>
+
+		<h6 style="position: absolute; top:220px; width: 126px; text-align: center">Feel likes</h6>
+		<h6 id="Feelslike" style="position: absolute; top:240px; width: 126px; text-align: center"></h6>
+
+		<h6 id="Cloudness" style="position: absolute; top:155px; left: 140px; width: 156px; text-align: center"></h6>
+
+		
+		<div><img src="/lib/Resources/navigation.svg" class="img-responsive med-img" id="windImg"
+				style="position: absolute; top: 210px; left: 140px; width:40px">
+		</div>
+		<p id="Wind" style="position: absolute; top: 220px; left: 200px;"></p>
+
+	</div>
+
+	<!-- <script src="/VS-Weather/js/hourlyForecast.js"></script> -->
+
+
+
+
+
+
+
+	<div class="row" style="position: absolute; top: 295px; left: 205px;">
+
+		<div class="hourly">
+			<p id="dtd1" class="dt"></p>
+			<div><img id="imd1" class="im"></img></div>
+			<p id="tempd1"></p>
+			<p id="tempd12"></p>
+			<p id="tempd13"></p>
+			<div id="moond2"></div>
+		</div>
+		<div class="hourly">
+			<p id="dtd2" class="dt"></p>
+			<div><img id="imd2" class="im"></img></div>
+			<p id="tempd2"></p>
+			<p id="tempd22"></p>
+			<p id="tempd23"></p>
+			<div id="moond3"></div>
+		</div>
+		<div class="hourly">
+			<p id="dtd3" class="dt"></p>
+			<div><img id="imd3" class="im"></img></div>
+			<p id="tempd3"></p>
+			<p id="tempd32"></p>
+			<p id="tempd33"></p>
+			<div id="moond4"></div>
+		</div>
+		<div class="hourly">
+			<p id="dtd4" class="dt"></p>
+			<div><img id="imd4" class="im"></img></div>
+			<p id="tempd4"></p>
+			<p id="tempd42"></p>
+			<p id="tempd43"></p>
+			<div id="moond5"></div>
+		</div>
+		<div class="hourly">
+			<p id="dtd5" class="dt"></p>
+			<div><img id="imd5" class="im"></img></div>
+			<p id="tempd5"></p>
+			<p id="tempd52"></p>
+			<p id="tempd53"></p>
+			<div id="moond6"></div>
+		</div>
+		<div class="hourly">
+			<p id="dtd6" class="dt"></p>
+			<div><img id="imd6" class="im"></img></div>
+			<p id="tempd6"></p>
+			<p id="tempd62"></p>
+			<p id="tempd63"></p>
+			<div id="moond7"></div>
+		</div>
+		<div class="hourly">
+			<p id="dtd7" class="dt"></p>
+			<div><img id="imd7" class="im"></img></div>
+			<p id="tempd7"></p>
+			<p id="tempd72"></p>
+			<p id="tempd73"></p>
+			<div id="moond8"></div>
+		</div>
+
+	</div>
+
+
+><!-- <div class="hourly" style="position: absolute; border: solid; left: 25px; top: 295px;">
+		<p class="dt">Sun</p>
+		<div id="moon1"></div>
+	</div>
+	<p style="position: absolute; border: solid; left: 25px; top:385px; margin: 0 0 0 4px;
+    padding: 0 0 115px 0;
+    width: 64px;
+    background-color: #ffae00;
+    text-align: center;
+	border-radius: 10%;">30</p>
+
+	<p style="position: absolute; border: solid; left: 25px; top:423px; margin: 0 0 0 4px;
+    padding: 0 0 77px 0;
+    width: 64px;
+    background-color:#00ddff;
+    text-align: center;
+	border-radius: 10%;">30</p>
+
+	<p style="position: absolute; border: solid; left: 25px; top:461px; margin: 0 0 0 4px;
+    padding: 0 0 39px 0;
+    width: 64px;
+    background-color:#006eff;
+    text-align: center;
+    border-radius: 10%;">30</p>
+-->
+
+
+	<!-- ><div>
+		<div class="row">
+			<div><img id="temph" src="/lib/Resources/high-temperature.svg" style="width:32px"></img>
+				<p id="htemp"></p>
+			</div>
+			<div><img id="templ" src="/lib/Resources/low-temperature.svg" style="width:32px"></img>
+				<p id="ltemp"></p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div><img src="/lib/Resources/navigation.svg" class="img-responsive med-img" id="windImg"
+					style="margin-left:80px; width:40px">
+			</div>
+			<p id="Wind" style="margin-left:20px"></p>
+		</div>
+	</div>
+
+	<p id="Cloudness" style="font-style: bold; margin-left:10px; width: 150px; height: 24px">
+	<p id="Pressure" style="font-style: bold; margin-left:10px; width: 150px; height: 24px">
+	<p id="Humidity" style="font-style: bold; margin-left:10px; width: 60px; height: 24px">
+	<p id="Geocoords" style="font-style: bold; margin-left:10px; width: 150px; height: 24px">
+	-->
+
+
+
+
+</body>
+
+</html>
